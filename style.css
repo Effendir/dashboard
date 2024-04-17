@@ -1,5 +1,19 @@
 /* GENERAL */
 
+@font-face {
+  font-family: "techno";
+  src: url(fonts/techno.otf);
+}
+
+@font-face {
+  font-family: "trench";
+  src: url(fonts/trench.otf);
+}
+@font-face {
+  font-family: "trigram";
+  src: url(fonts/trigram.ttf);
+}
+
 :root {
   --purple: #D516BF;
   --yellow: #ECFA4D;
@@ -17,7 +31,7 @@ body {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 2fr 9fr 1fr;
 }
 
@@ -30,7 +44,7 @@ body {
   color: white;
   grid-area: 1 / 1 / 4 / 2;
   display: grid;
-  grid-template-rows : 1fr 3fr 3fr;
+  grid-template-rows : 1fr 4fr 3fr;
 }
 
 .sidebar-title {
@@ -38,6 +52,7 @@ body {
   grid-template-columns: 1fr 3fr;
   padding-top: 15%;
   padding-left: 5%;
+  font-family: "trigram", sans-serif;
 }
 
 .sidebar-title i {
@@ -46,6 +61,7 @@ body {
 
 .sidebar h2 {
   margin: 0;
+  font-size: larger;
 }
 
 .sidebar-links {
@@ -53,11 +69,14 @@ body {
   grid-template-columns: 1fr 3fr;
   justify-items: left;
   align-items: center;
+  font-family: "trigram";
+  font-size: medium;
 }
 
 .sidebar-links i {
 margin-left: 20px;
 font-size: medium;
+padding-left: 15%;
 }
 
 .sidebar p {
