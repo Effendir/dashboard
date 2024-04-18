@@ -96,7 +96,7 @@ padding-left: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px;
 }
 
 .user {
@@ -166,18 +166,34 @@ input {
 
 .wrapper {
   grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-top: 2%;
 }
 
+.wrapper h3 {
+  font-family: "trigram";
+  font-size: small;
+  color: var(--blue);
+  padding-left: 2%;
+}
 .projects {
-
+  grid-area: 1 / 1 / 3 / 2;
 }
 
-.announcements {
-
+.project-card {
+  border: 1px solid var(--purple);
+  border-radius: 2px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
 }
 
-.trending {
-
+.news-card, .trending-card {
+  height: 80%;
+  margin-right: 10%;
+  border: 1px solid var(--purple);
+  border-radius: 2px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
 }
 
 /* FOOTER */
