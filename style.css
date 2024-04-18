@@ -182,16 +182,38 @@ input {
   grid-area: 1 / 1 / 3 / 2;
 }
 
+.projects-cards {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 .project-card {
-  border: 1px solid var(--purple);
+  border: 2px solid var(--green);
   border-radius: 2px;
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+  width: 95%;
+  margin-bottom: 5%;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h4 {
+  font-family: "trigram";
+  font-size: x-small;
+  color: var(--blue);
+  padding-left: 2%;
 }
 
 .news-card, .trending-card {
-  height: 70%;
+  height: 75%;
   margin-right: 10%;
-  border: 1px solid var(--purple);
+  border: 2px solid var(--green);
   border-radius: 2px;
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
   display: flex;
@@ -199,25 +221,39 @@ input {
   justify-content: center;
 }
 
-.news-card p, .trending-card p {
+.news-card p, .project-card p {
   text-align: center;
   color: var(--blue);
   font-family: "trench", sans-serif;
   font-weight: bold;
+  font-size: large;
   padding-left: 5%;
   padding-right: 5%;
 }
 
+.news-card i:hover {
+  transform: scale(1.3);
+}
+
 .trending-card img {
-  height: 40px;
+  height: 50px;
+  width: auto;
   border-radius: 50%;
+  justify-self: center;
+}
+
+.trending-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
 }
 
 .trending-card p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
+  color: var(--blue);
+  font-family: "trench", sans-serif;
+  font-weight: bold;
+  font-size: large;
 }
 
 hr {
