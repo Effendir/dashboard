@@ -189,13 +189,40 @@ input {
 }
 
 .news-card, .trending-card {
-  height: 80%;
+  height: 70%;
   margin-right: 10%;
   border: 1px solid var(--purple);
   border-radius: 2px;
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.news-card p, .trending-card p {
+  text-align: center;
+  color: var(--blue);
+  font-family: "trench", sans-serif;
+  font-weight: bold;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.trending-card img {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.trending-card p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+hr {
+  width: 30%;
+}
 /* FOOTER */
 
 footer {
