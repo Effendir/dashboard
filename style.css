@@ -28,11 +28,10 @@ body {
 }
 
 .container {
-  height: 100vh;
-  width: 100vw;
   display: grid;
+  min-height: 100vh;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 16fr 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 
 /* SIDEBAR */
@@ -53,6 +52,7 @@ body {
   padding-top: 12%;
   padding-left: 5%;
   font-family: "trigram", sans-serif;
+  color: var(--green);
 }
 
 .sidebar-title i {
@@ -72,6 +72,7 @@ body {
   font-family: "trigram";
   font-size: small;
   gap: 5%;
+  color: var(--yellow);
 }
 
 .sidebar-links p:hover {
@@ -128,6 +129,7 @@ padding-left: 50%;
   border-radius: 50%;
   grid-area: 1 / 2 / 3 / 3;
   align-self: center;
+  border: 2px solid var(--blue);
 }
 
 .search-bar {
@@ -167,9 +169,10 @@ input {
 .wrapper {
   grid-area: 2 / 2 / 3 / 3;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr 1fr;
   padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 .wrapper h3 {
@@ -184,12 +187,10 @@ input {
 
 .projects-cards {
   display: grid;
-  gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 5%;
+  grid-template-rows: repeat(auto, minmax(150px, 1fr));
   padding-left: 2%;
-  padding-right: 2%;
-}
+  padding-right: 2%;}
 
 .projects-cards a {
   text-decoration: none;
@@ -199,14 +200,16 @@ input {
   border: 2px solid var(--green);
   border-radius: 2px;
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
-  width: 95%;
-  margin-bottom: 5%;
+  width: 80%;
+  margin: 5%;
+  padding: 2%;
   display: flex;
   flex-direction: column;
 }
 
 .project-card img {
-  height: 120px;
+  max-height: 120px;
+  max-width: 70%;
   align-self: center;
 }
 
@@ -251,6 +254,7 @@ input {
   width: auto;
   border-radius: 50%;
   justify-self: center;
+  border: 2px solid var(--yellow);
 }
 
 .trending-card {
