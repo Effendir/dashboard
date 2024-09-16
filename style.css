@@ -15,10 +15,10 @@
 }
 
 :root {
-  --purple: #D516BF;
-  --yellow: #ECFA4D;
-  --blue: #1A3783;
-  --green: #78FDA1;
+  --black: #000000;
+  --yellow: #FFED00;
+  --blue: #0F6292;
+  --green: #16FF00;
 }
 
 body {
@@ -30,29 +30,30 @@ body {
 .container {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 1fr 5fr;
   grid-template-rows: auto 1fr auto;
+  grid-template-columns: 250px 1fr;
 }
 
 /* SIDEBAR */
 
 .sidebar {
-  text-align: left;
   font-weight: bold;
-  background-color: var(--blue);
-  color: white;
+  background-color: var(--black);
   grid-area: 1 / 1 / 4 / 2;
-  display: grid;
-  grid-template-rows : 1fr 3fr 4fr;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sidebar-title {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  padding-top: 12%;
-  padding-left: 5%;
+  margin-top: 10%;
+  margin-bottom: 5%;
   font-family: "trigram", sans-serif;
   color: var(--green);
+  padding: 10px;
 }
 
 .sidebar-title i {
@@ -65,103 +66,58 @@ body {
 }
 
 .sidebar-links {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  justify-items: left;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   font-family: "trigram";
   font-size: small;
-  gap: 5%;
+  gap: 15px;
+  margin: 15px;
+}
+
+.sidebar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-links a:visited {
   color: var(--yellow);
 }
 
-.sidebar-links p:hover {
+.sidebar-links a:hover {
   color: var(--green);
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
-.sidebar-links i {
-font-size: medium;
-padding-left: 50%;
-}
-
-.sidebar p {
-  margin: 0;
-}
 
 /* HEADER */
 
 .header {
   grid-area: 1 / 2 / 2 / 3;
-  background-color: white;
+  background-color: var(--blue);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px;
-}
-
-.user {
-  grid-area: 1 / 1 / 3 / 2;
-  padding-left: 5%;
+  padding: 5px;
+  box-shadow: rgba(15, 98, 146, 0.4) 0px 5px, rgba(15, 98, 146, 0.3) 0px 10px, rgba(15, 98, 146, 0.2) 0px 15px;
   font-family: "trench", sans-serif;
   font-weight: bolder;
   color: var(--purple);
   display: grid;
 }
 
-.user p {
-  font-size: large;
-  margin-top: 5%;
-  margin-bottom: 0;
-}
-
-.user h2 {
+.header h2 {
+  color: white;
   font-size: x-large;
   margin-bottom: 5%;
   padding-left: 25%;
-  grid-area: 2 / 1 / 3 / 2;
   align-self:auto;
 }
 
-.user img {
+.header img {
   height: 60px;
   object-fit: cover;
   border-radius: 50%;
   grid-area: 1 / 2 / 3 / 3;
-  align-self: center;
-  border: 2px solid var(--blue);
-}
-
-.search-bar {
-  grid-area: 1 / 2 / 2 / 3;
-  display: grid;
-  align-items: center;
-}
-
-input {
-  border: 2px solid var(--purple);
-  border-radius: 15px;
-  width: 70%;
   justify-self: center;
-  font-family: "trench", sans-serif;
-  font-weight: bold;
-  color: black;
-  padding-left: 2%;
-}
-
-.toolbar{
-  grid-area: 2 / 2 / 3 / 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-  margin-bottom: 20px;
-  color: var(--purple);
-}
-
-.toolbar i:hover {
-  transform: scale(1.3);
-  color: var(--green);
+  border: 2px solid var(--yellow);
 }
 
 /* WRAPPER */
@@ -169,8 +125,6 @@ input {
 .wrapper {
   grid-area: 2 / 2 / 3 / 3;
   display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: 1fr 1fr;
   padding-top: 2%;
   padding-bottom: 2%;
 }
@@ -181,6 +135,7 @@ input {
   color: var(--blue);
   padding-left: 2%;
 }
+
 .projects {
   grid-area: 1 / 1 / 3 / 2;
 }
@@ -197,9 +152,9 @@ input {
 }
 
 .project-card {
-  border: 2px solid var(--green);
+  border: 2px solid var(--blue);
   border-radius: 2px;
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+  box-shadow: rgba(15, 98, 146, 0.4) 5px 5px, rgba(15, 98, 146, 0.3) 10px 10px, rgba(15, 98, 146, 0.2) 15px 15px;
   width: 80%;
   margin: 5%;
   padding: 2%;
@@ -278,8 +233,8 @@ hr {
 
 footer {
   grid-area: 3 / 2 / 4 / 3;
-  background-color: #D516BF;
-  color: white;
+  background-color: var(--yellow);
+  color: var(--black);
   font-family: "trench", sans-serif;
   font-weight: bold;
   display: flex;
@@ -289,7 +244,7 @@ footer {
 }
 
 footer a {
-  color: var(--yellow);
+  color: var(--black);
 }
 
 footer a:hover, .footer-links i:hover {
